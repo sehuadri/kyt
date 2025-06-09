@@ -23,11 +23,11 @@ Button.inline(" SETTING ","setting")],
 	elif val == "true":
 		sh = f' cat /etc/xray/ssh | grep "###" | wc -l'
 		ssh = subprocess.check_output(sh, shell=True).decode("ascii")
-		vm = f' cat /etc/xray/config.json | grep "#vmg" | wc -l'
+		vm = f' cat /etc/xray/config.json | grep "#vm" | wc -l'
 		vms = subprocess.check_output(vm, shell=True).decode("ascii")
-		vl = f' cat /etc/xray/config.json | grep "#vlg" | wc -l'
+		vl = f' cat /etc/xray/config.json | grep "#vl" | wc -l'
 		vls = subprocess.check_output(vl, shell=True).decode("ascii")
-		tr = f' cat /etc/xray/config.json | grep "#trg" | wc -l'
+		tr = f' cat /etc/xray/config.json | grep "#tr" | wc -l'
 		trj = subprocess.check_output(tr, shell=True).decode("ascii")
 		noob = f' cat /etc/xray/noob | grep "###" | wc -l'
 		noobz = subprocess.check_output(noob, shell=True).decode("ascii")
