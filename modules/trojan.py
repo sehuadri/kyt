@@ -169,7 +169,7 @@ async def akun_trojan(event):
 async def restore_trojan(event):
 	async def restore_trojan_(event):
 		async with bot.conversation(chat) as user:
-			cmd2 = f" cat /etc/trojan/akundelete | grep '^###' |  cut -d ' ' -f 2-3 | nl -s ') '".strip()
+			cmd2 = f" cat /etc/trojan/akundelete | grep '^#tr' |  cut -d ' ' -f 2-3 | nl -s ') '".strip()
 			x = subprocess.check_output(cmd2, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
 			print(x)
 			z = subprocess.check_output(cmd2, shell=True).decode("ascii")
@@ -224,7 +224,7 @@ async def restore_trojan(event):
 async def loginip_trojan(event):
 	async def loginip_trojan_(event):
 		async with bot.conversation(chat) as user:
-			cmd2 = f" cat /etc/trojan/listlock | grep '^###' |  cut -d ' ' -f 2-3 | nl -s ') '".strip()
+			cmd2 = f" cat /etc/trojan/listlock | grep '^#tr' |  cut -d ' ' -f 2-3 | nl -s ') '".strip()
 			x = subprocess.check_output(cmd2, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
 			print(x)
 			z = subprocess.check_output(cmd2, shell=True).decode("ascii")
@@ -260,7 +260,7 @@ async def loginip_trojan(event):
 async def logingb_trojan(event):
 	async def logingb_trojan_(event):
 		async with bot.conversation(chat) as user:
-			cmd2 = f" cat /etc/trojan/userQuota | grep '^###' |  cut -d ' ' -f 2-3 | nl -s ') '".strip()
+			cmd2 = f" cat /etc/trojan/userQuota | grep '^#tr' |  cut -d ' ' -f 2-3 | nl -s ') '".strip()
 			x = subprocess.check_output(cmd2, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
 			print(x)
 			z = subprocess.check_output(cmd2, shell=True).decode("ascii")
