@@ -5,7 +5,7 @@ from kyt import *
 async def delete_vmess(event):
 	async def delete_vmess_(event):
 		async with bot.conversation(chat) as user:
-			cmd2 = f" cat /etc/xray/config.json | grep '^#vmg' |  cut -d ' ' -f 2-3 | nl -s ') '".strip()
+			cmd2 = f" cat /etc/xray/config.json | grep '^#vm' |  cut -d ' ' -f 2-3 | nl -s ') '".strip()
 			x = subprocess.check_output(cmd2, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
 			print(x)
 			z = subprocess.check_output(cmd2, shell=True).decode("ascii")
@@ -41,7 +41,7 @@ async def delete_vmess(event):
 async def renew_vmess(event):
 	async def renew_vmess_(event):
 		async with bot.conversation(chat) as user:
-			cmd2 = f" cat /etc/xray/config.json | grep '^#vmg' |  cut -d ' ' -f 2-3 | nl -s ') '".strip()
+			cmd2 = f" cat /etc/xray/config.json | grep '^#vm' |  cut -d ' ' -f 2-3 | nl -s ') '".strip()
 			x = subprocess.check_output(cmd2, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
 			print(x)
 			z = subprocess.check_output(cmd2, shell=True).decode("ascii")
@@ -84,7 +84,7 @@ async def renew_vmess(event):
 async def limit_vmess(event):
 	async def limit_vmess_(event):
 		async with bot.conversation(chat) as user:
-			cmd2 = f" cat /etc/xray/config.json | grep '^#vmg' |  cut -d ' ' -f 2-3 | nl -s ') '".strip()
+			cmd2 = f" cat /etc/xray/config.json | grep '^#vm' |  cut -d ' ' -f 2-3 | nl -s ') '".strip()
 			x = subprocess.check_output(cmd2, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
 			print(x)
 			z = subprocess.check_output(cmd2, shell=True).decode("ascii")
@@ -132,7 +132,7 @@ async def limit_vmess(event):
 async def akun_vmess(event):
 	async def akun_vmess_(event):
 		async with bot.conversation(chat) as user:
-			cmd2 = f" cat /etc/xray/config.json | grep '^#vmg' |  cut -d ' ' -f 2-3 | nl -s ') '".strip()
+			cmd2 = f" cat /etc/xray/config.json | grep '^#vm' |  cut -d ' ' -f 2-3 | nl -s ') '".strip()
 			x = subprocess.check_output(cmd2, shell=True, stderr=subprocess.STDOUT, universal_newlines=True)
 			print(x)
 			z = subprocess.check_output(cmd2, shell=True).decode("ascii")
@@ -442,7 +442,7 @@ Button.inline(" Restore ","restore7-vmess"),
 Button.inline(" Akun ","akun7-vmess")],
 [Button.inline("‹ BACK ›","menu")]]
 		z = requests.get(f"http://ip-api.com/json/?fields=country,region,city,timezone,isp").json()
-		vm = f' cat /etc/xray/config.json | grep "#vmg" | wc -l'
+		vm = f' cat /etc/xray/config.json | grep "#vm" | wc -l'
 		vms = subprocess.check_output(vm, shell=True).decode("ascii")
 		msg = f"""
 **✧◇───────────────────◇✧** 
