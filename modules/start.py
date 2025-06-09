@@ -15,13 +15,13 @@ Button.url("ORDER SCRIPT","https://t.me/cloudvpnpremium")]]
 		except:
 			await event.reply("Akses Ditolak")
 	elif val == "true":
-		sh = f' cat /etc/ssh/.ssh.db | grep "###" | wc -l'
+		sh = f' cat /etc/xray/ssh | grep "###" | wc -l'
 		ssh = subprocess.check_output(sh, shell=True).decode("ascii")
-		vm = f' cat /etc/vmess/.vmess.db | grep "###" | wc -l'
+		vm = f' cat /etc/xray/config.json | grep "#vm" | wc -l'
 		vms = subprocess.check_output(vm, shell=True).decode("ascii")
-		vl = f' cat /etc/vless/.vless.db | grep "###" | wc -l'
+		vl = f' cat /etc/xray/config.json | grep "#vl" | wc -l'
 		vls = subprocess.check_output(vl, shell=True).decode("ascii")
-		tr = f' cat /etc/trojan/.trojan.db | grep "###" | wc -l'
+		tr = f' cat /etc/xray/config.json | grep "#tr" | wc -l'
 		trj = subprocess.check_output(tr, shell=True).decode("ascii")
 		sdss = f" cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/PRETTY_NAME//g'"
 		namaos = subprocess.check_output(sdss, shell=True).decode("ascii")
